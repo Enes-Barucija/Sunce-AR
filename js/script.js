@@ -85,6 +85,7 @@ const showMoreButton = document.querySelector(".btn--more-photos");
 let currentIndex = 0;
 let hammer;
 
+// Open Modal //
 galleryImages.forEach((img, index) => {
   img.addEventListener("click", () => {
     currentIndex = index;
@@ -167,3 +168,10 @@ function enableScroll() {
   document.body.style.overflow = "";
   document.body.style.touchAction = "";
 }
+
+// MOBILE NAVIGATION //
+
+btnMobile.addEventListener("click", function () {
+  header.classList.toggle("nav-open");
+  html.classList.toggle("prevent-scrolling");
+});
