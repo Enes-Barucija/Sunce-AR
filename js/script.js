@@ -19,8 +19,13 @@ allLinks.forEach(function (link) {
     if (header.classList.contains("nav-open")) {
       html.classList.toggle("prevent-scrolling");
     }
-    e.preventDefault();
     const href = link.getAttribute("href");
+
+    if (href && (href.startsWith("tel:") || href.startsWith("mailto:"))) {
+      return;
+    }
+
+    e.preventDefault();
 
     if (href === "#")
       window.scrollTo({
@@ -174,4 +179,10 @@ function enableScroll() {
 btnMobile.addEventListener("click", function () {
   header.classList.toggle("nav-open");
   html.classList.toggle("prevent-scrolling");
+});
+
+const footerPhone = document.querySelector(".footer-link");
+
+footerPhone.addEventListener("click", () => {
+  console.log("I have been clicked");
 });
