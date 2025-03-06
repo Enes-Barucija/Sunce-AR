@@ -121,6 +121,10 @@
 
   /* SIZES */
 
+  .gallery {
+    padding: 1.6rem 0 0 0;
+  }
+
   .card-txt {
     font-size: 1.6rem;
   }
@@ -182,7 +186,13 @@
     padding: 1.6rem 2.4rem;
     text-align: center;
     font-size: 2rem;
+    margin: 3rem;
   }
+
+  .number-container-sticky p {
+    display: none;
+  }
+
   .modal-img {
     max-width: 100vw;
   }
@@ -192,6 +202,9 @@
 }
 
 @media (max-width: 440px) {
+  .heading-primary {
+    font-size: 2.4rem;
+  }
   .map img {
     transform: scale(1.1) translateX(-2rem) translateY(1rem);
   }
@@ -210,9 +223,6 @@
 @media (max-width: 360px) {
   .info {
     padding: 2.4rem;
-  }
-  .gallery {
-    padding: 1.6rem 0 0 0;
   }
 
   .heading-primary {
