@@ -1,0 +1,235 @@
+@media (max-width: 1280px) {
+  .grid {
+    column-gap: 5.2rem;
+    row-gap: 6.4rem;
+  }
+  .heading-tertiary {
+    font-size: 3.6rem;
+    margin-bottom: 1.8rem;
+  }
+  .card-txt {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 0 3vw;
+  }
+  .info {
+    padding: 3.2rem;
+  }
+  .heading-tertiary {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .card-txt {
+    font-size: 1.4rem;
+  }
+  .gallery {
+    padding: 3.2rem 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery img {
+    width: 46vw;
+    height: 30vw;
+  }
+  .modal-img {
+    max-width: 90vw;
+    max-height: auto;
+  }
+  .left-arrow {
+    left: 1rem;
+  }
+  .right-arrow {
+    right: 1rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .heading-primary {
+    font-size: 3.6rem;
+  }
+  .map {
+    height: 36rem;
+  }
+  .footer-info {
+    padding: 4rem 4rem;
+  }
+  .logo {
+    height: 6.4rem;
+  }
+  .grid--footer {
+    grid-template-columns: 0.8fr 1.5fr 1fr 1fr;
+  }
+  .grid {
+    column-gap: 3rem;
+  }
+}
+
+@media (max-width: 620px) {
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 1000;
+  }
+
+  .main-nav {
+    background-color: #fef3e9b0;
+    backdrop-filter: blur(2px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+
+  /* SIZES */
+
+  .card-txt {
+    font-size: 1.6rem;
+  }
+
+  .grid--2-cols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+  .card-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+  .card-img-box {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn--hidden {
+    display: block;
+  }
+
+  .gallery img:nth-child(n + 9) {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+  }
+  .gallery img.show-more {
+    opacity: 1;
+    max-height: 30vw;
+  }
+
+  .map {
+    max-height: 24rem;
+    overflow: hidden;
+  }
+  .map img {
+    transform: scale(1.2) translateX(-2rem) translateY(2rem);
+  }
+  .footer-info {
+    padding: 4rem 3rem;
+  }
+  .logo {
+    height: 8.4rem;
+  }
+  .grid--footer {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid {
+    column-gap: 2rem;
+    row-gap: 4rem;
+  }
+  .logo-col {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .phone-container-sticky {
+    padding: 1.6rem 2.4rem;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .modal-img {
+    max-width: 100vw;
+  }
+  .arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 440px) {
+  .map img {
+    transform: scale(1.1) translateX(-2rem) translateY(1rem);
+  }
+  .logo {
+    height: 7.4rem;
+  }
+  .footer-info {
+    padding: 4rem 2rem 8rem 2rem;
+  }
+  .grid {
+    column-gap: 4rem;
+    row-gap: 4rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .info {
+    padding: 2.4rem;
+  }
+  .gallery {
+    padding: 1.6rem 0 0 0;
+  }
+
+  .heading-primary {
+    font-size: 2.4rem;
+  }
+  .map img {
+    transform: translateX(0) translateY(0);
+  }
+  .logo {
+    height: 5.6rem;
+  }
+  .grid {
+    column-gap: 4rem;
+    row-gap: 4rem;
+  }
+  .phone-container-sticky {
+    margin: 2rem;
+    padding: 1rem 2rem;
+  }
+}
