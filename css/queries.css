@@ -125,6 +125,10 @@
     padding: 1.6rem 0 0 0;
   }
 
+  .more--btn-helper {
+    margin-top: 2rem;
+  }
+
   .card-txt {
     font-size: 1.6rem;
   }

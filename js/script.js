@@ -127,6 +127,7 @@ rightArrow.addEventListener("click", () => {
 
 showMoreButton.addEventListener("click", () => {
   const isMore = showMoreButton.textContent === "Prikaži manje";
+  showMoreButton.classList.toggle("more--btn-helper");
 
   galleryImages.forEach((item, index) => {
     if (index >= 8) {
@@ -185,4 +186,19 @@ const footerPhone = document.querySelector(".footer-link");
 
 footerPhone.addEventListener("click", () => {
   console.log("I have been clicked");
+});
+
+// MAP LINK //
+
+const mapLink = document.querySelector(".map");
+
+mapLink.addEventListener("click", () => {
+  const userConfirmed = confirm("Želite li otvoriti link u novoj kartici?");
+
+  if (userConfirmed) {
+    window.open(
+      "https://www.google.com/maps/place/45%C2%B001'42.0%22N+18%C2%B042'16.3%22E/@45.028332,18.704524,17z/data=!3m1!4b1!4m4!3m3!8m2!3d45.028332!4d18.704524?entry=ttu&g_ep=EgoyMDI1MDMwOC4wIKXMDSoASAFQAw%3D%3D",
+      "_blank"
+    );
+  }
 });
